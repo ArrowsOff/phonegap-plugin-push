@@ -175,11 +175,11 @@ public class GCMIntentService extends GcmListenerService implements PushConstant
      * Replace alternate keys with our canonical value
      */
     private String normalizeKey(String key, String messageKey, String titleKey) {
-        if (key.equals(BODY) || key.equals(ALERT) || key.equals(MP_MESSAGE) || key.equals(GCM_NOTIFICATION_BODY) || key.equals(TWILIO_BODY) || key.equals(messageKey)) {
+        if (key.equals(BODY) || key.equals(ALERT) || key.equals(MP_MESSAGE) || key.equals(GCM_NOTIFICATION_BODY) || key.equals(TWILIO_BODY) || key.equals(CLEVERTAP_MESSAGE) || key.equals(messageKey)) {
             return MESSAGE;
-        } else if (key.equals(TWILIO_TITLE) || key.equals(SUBJECT) || key.equals(titleKey)) {
+        } else if (key.equals(TWILIO_TITLE) || key.equals(SUBJECT) || key.equals(CLEVERTAP_TITLE) || key.equals(titleKey)) {
             return TITLE;
-        }else if (key.equals(MSGCNT) || key.equals(BADGE)) {
+        } else if (key.equals(MSGCNT) || key.equals(BADGE)) {
             return COUNT;
         } else if (key.equals(SOUNDNAME) || key.equals(TWILIO_SOUND)) {
             return SOUND;
